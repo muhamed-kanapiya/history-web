@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Web</title>
+  <link rel="stylesheet" href="./assets/scss/main.scss">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="py-4">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col ps-0"><a href="#"><img src="./assets/img/ham.svg" alt=""></a></div>
+        <div class="col-7 text-center">
+          <a href="#"><img src="./assets/img/logo.svg"></a>
+        </div>
+        <div class="col pe-0 text-end"><a href="#"><img src="./assets/img/qr.svg"></a><img src="./assets/img/vector.svg"
+            class="ms-3"><a href="#"><img src="./assets/img/alert.svg" class="ms-3"></a><a href="#"><img
+              src="./assets/img/exit.svg" class="ms-3"></a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <section class="bg-gray px-3 py-4">
+    <div class="container bg-white rounded-1 px-5 py-5">
+      <div class="row">
+        <div class="text-end"><a class="text-decoration-none text-secondary" href="#"><img src="./assets/img/back.svg">
+            Назад</a></div>
+        <h2 class="ps-0 ms-0">История</h2>
+      </div>
+      <div class="row mt-4 gap-0">
+        <div class="col-4 ps-0 pe-0"><button class="chargesbtn text-center">Начисления</button></div>
+        <div class="col-4 ps-0 pe-0"><button class="paybtn text-center">Оплаты</button></div>
+      </div>
+
+      <br><br>
+      FITNESS
+      г. Саратов, <br>
+      ул. Габричевского 245/56
+
+      <!-- Tab content -->
+      <div id="KBS" class="tabcontent">
+        <div class="row d-flex align-items-center">
+          <div class="col"><img src="./assets/img/left.svg"></div>
+          <div class="col-10">
+            <div class="cards p-3 mt-3 mb-5 w-100">
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+          <div class="col"><img src="./assets/img/right.svg"></div>
+        </div>
+      </div>
+      <div id="FKR" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      <div id="SPEGS" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      <div id="TKO" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      <!-- Tab links -->
+      <div class="tab text-center">
+        <button class="tablinks kbs" onclick="openCity(event, 'KBS')">KBC</button>
+        <button class="tablinks fkr" onclick="openCity(event, 'FKR')">ФКР</button>
+        <button class="tablinks spegs" onclick="openCity(event, 'SPEGS')">СПГЭС</button>
+        <button class="tablinks tko" onclick="openCity(event, 'TKO')">ТКО</button>
+      </div>
+
+    </div>
+  </section>
+  <footer class="bg-white ps-2 pe-2 pt-5 pb-5">
+    <div class="container">
+      <div class="row row-cols-4">
+        <div class="col">
+          <a href="#" class="footer-link">Наши контакты</a>
+          <a href="#" class="footer-link">Справка и помощь</a>
+          <a href="#" class="footer-link">О приложении</a>
+        </div>
+        <div class="col">
+          <a href="#" class="footer-link">Профиль</a>
+          <a href="#" class="footer-link">QR-код</a>
+          <a href="#" class="footer-link">Обращения</a>
+        </div>
+        <div class="col">
+          <div class="row row-cols-1 row-gap-2">
+            <div class="col">
+              <span class="contact-title">Email:</span>
+              <span class="contact">saarrc@gmail.com</span>
+            </div>
+            <div class="col">
+              <span class="contact-title">Телефон:</span>
+              <span class="contact">+7 (945) 777-72-11</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row row-cols-1 row-gap-2">
+            <div class="col"><img class="float-start me-2" src="./assets/img/app-store.svg" width="44px">
+              <span class="store-on">Доступно в</span><br>
+              <span class="store-name">Apple store</span>
+            </div>
+            <div class="col"><img class="float-start me-2" src="./assets/img/play-market.svg" width="44px">
+              <span class="store-on">Доступно в</span><br>
+              <span class="store-name">Google Play</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="./assets/js/main.js"></script>
+  <script src="./assets/js/tabs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+  <!-- Chart code -->
+  <script>
+    am5.ready(function () {
+
+      // Create root element
+      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+      var root = am5.Root.new("chartdiv");
+
+
+      // Set themes
+      // https://www.amcharts.com/docs/v5/concepts/themes/
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+
+
+      // Create chart
+      // https://www.amcharts.com/docs/v5/charts/xy-chart/
+      var chart = root.container.children.push(am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: root.verticalLayout
+      }));
+
+      // Add scrollbar
+      // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+      chart.set("scrollbarX", am5.Scrollbar.new(root, {
+        orientation: "horizontal"
+      }));
+
+      var data = [{
+        "month": "Фев. 22",
+        "kbs": 2.5,
+        "fkr": 2.5,
+        "spges": 2.1,
+        "tko": 1
+      }, {
+        "month": "Мар. 22",
+        "kbs": 2.6,
+        "fkr": 2.7,
+        "spges": 2.2,
+        "tko": 0.5
+      }, {
+        "month": "Апр. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Май. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Июн. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Июл. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Авг. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Сен. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Окт. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Ноя. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      },
+      {
+        "month": "Дек. 22",
+        "kbs": 2.8,
+        "fkr": 2.9,
+        "spges": 2.4,
+        "tko": 0.3
+      }
+      ]
+
+
+      // Create axes
+      // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+      var xRenderer = am5xy.AxisRendererX.new(root, {});
+      var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+        categoryField: "month",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {})
+      }));
+
+      xRenderer.grid.template.setAll({
+        location: 1
+      })
+
+      xAxis.data.setAll(data);
+
+      var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+        min: 0,
+        renderer: am5xy.AxisRendererY.new(root, {
+          strokeOpacity: 0.1
+        })
+      }));
+
+
+      // Add legend
+      // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
+      var legend = chart.children.push(am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50
+      }));
+
+
+      // Add series
+      // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+      function makeSeries(name, fieldName) {
+        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+          name: name,
+          stacked: true,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          valueYField: fieldName,
+          categoryXField: "month"
+        }));
+
+        series.columns.template.setAll({
+          tooltipText: "{name}, {categoryX}: {valueY}",
+          tooltipY: am5.percent(10)
+        });
+        series.data.setAll(data);
+
+        // Make stuff animate on load
+        // https://www.amcharts.com/docs/v5/concepts/animations/
+        series.appear();
+
+        series.bullets.push(function () {
+          return am5.Bullet.new(root, {
+            sprite: am5.Label.new(root, {
+              text: "{valueY}",
+              fill: root.interfaceColors.get("alternativeText"),
+              centerY: am5.p50,
+              centerX: am5.p50,
+              populateText: true
+            })
+          });
+        });
+
+        legend.data.push(series);
+      }
+
+      makeSeries("КВС", "kbs", am5.color("#ff9900"));
+      makeSeries("ФКР", "fkr", am5.color("#e84e0f"));
+      makeSeries("СПГЭС", "spges");
+      makeSeries("ТКО", "tko");
+
+      chart.get("colors").set("colors", [
+        am5.color("#ff9900"),
+        am5.color("#e84e0f"),
+        am5.color("#4c7fe1"),
+        am5.color("#27ae60")
+      ]);
+
+
+      // Make stuff animate on load
+      // https://www.amcharts.com/docs/v5/concepts/animations/
+      chart.appear(1000, 100);
+
+    }); // end am5.ready()
+  </script>
+</body>
+
+</html>
