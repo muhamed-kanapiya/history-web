@@ -187,6 +187,16 @@ button.tko.active {
 /* Style the tab content */
 .tabcontent {
   display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #chartdiv {
